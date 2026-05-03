@@ -1,7 +1,7 @@
 import React from 'react'
 import {  Routes, Route, Navigate } from 'react-router-dom'
-import LoginPage from './pages/auth/LoginPage'
-import RegisterPage from './pages/auth/RegisterPage'
+import LoginPage from './pages/Auth/LoginPage'
+import RegisterPage from './pages/Auth/RegisterPage'
 import LandingPage from './pages/Landing/LandingPage'
 import AboutAnalytics from './pages/Landing/AboutAnalytics/AboutAnalytics'
 import AboutChatbot from './pages/Landing/AboutChatbot/AboutChatbot'
@@ -16,14 +16,14 @@ import FlashcardsListPage from './pages/Falshcards/FalshcardListPage';
 import FlashcardPage from './pages/Falshcards/FlashcardPage';
 import QuizTakePage from './pages/Quizzes/QuizTakePage';
 import QuizResultPage from './pages/Quizzes/QuizResultPage';
-import ProfilePage from './pages/Profile/profilePage';
+import ProfilePage from './pages/Profile/ProfilePage';
 import Pricing from './pages/Landing/Pricing/Pricing';
 import ResourcesSection from './pages/Landing/ResourcesSection/ResourcesSection';
 import ContactUs from './pages/Landing/ContactUs/ContactUs';
-import HowItWorks from './pages/Landing/HowItWorks/HowItWorks';
+import HowItWorks from './pages/Landing/Howitworks/Howitworks';
 import toast from "react-hot-toast";
 import { Toaster } from 'react-hot-toast';
-import { useAuth } from './context/AuthContext'
+import { useAuth } from './context/Authcontext'
 
 const App = () => {
   const {isAuthenticated,loading}=useAuth()
