@@ -25,3 +25,5 @@ dist-ssr
 # .gitignore
 .env
 .env.*
+backend/.env
+node_modules/
