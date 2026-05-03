@@ -23,7 +23,7 @@ import ContactUs from './pages/Landing/ContactUs/ContactUs';
 import HowItWorks from './pages/Landing/Howitworks/Howitworks';
 import toast from "react-hot-toast";
 import { Toaster } from 'react-hot-toast';
-import { useAuth } from './context/Authcontext'
+import { useAuth } from './context/AuthContext';
 
 const App = () => {
   const {isAuthenticated,loading}=useAuth()

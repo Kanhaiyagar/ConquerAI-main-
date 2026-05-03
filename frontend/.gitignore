@@ -33,3 +33,4 @@ backend/.env
 frontend/.env
 uploads/
 backend/uploads/
+dist/
