@@ -12,6 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@tailwindcss/vite": "^4.2.2",
+    "ai-learning-root": "file:..",
     "axios": "^1.15.0",
     "lucide-react": "^1.8.0",
     "moment": "^2.30.1",

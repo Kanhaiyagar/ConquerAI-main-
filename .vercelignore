@@ -1,0 +1,6 @@
+# Ignore backend code and local files during Vercel deployments
+backend/
+node_modules/
+*.log
+*.env
+.DS_Store
