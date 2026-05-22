@@ -1,4 +1,6 @@
-export const BASE_URL='http://localhost:8000';
+import { BACKEND_URL } from "./config";
+
+export const BASE_URL=BACKEND_URL;
 
 export const API_PATHS={
     AUTH:{

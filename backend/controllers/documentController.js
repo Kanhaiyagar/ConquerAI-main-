@@ -39,7 +39,7 @@ export const uploadDocument=async (req,res,next)=>{
         }
 
         //construct the URL for the uploaded file
-        const baseUrl=`http://localhost:${process.env.PORT || 8000}`;
+        const baseUrl=process.env.BACKEND_URL || `${req.protocol}://${req.get('host')}`;
         const fileUrl=`${baseUrl}/uploads/documents/${req.file.filename}`
 
         //cretae a document record

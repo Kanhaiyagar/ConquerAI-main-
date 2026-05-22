@@ -10,6 +10,7 @@ import ChatInterface from '../../components/chat/ChatInterface'
 import AIActions from '../../components/ai/AIActions'
 import FlashcardManager from '../../components/flashcards/FlashcardManager'
 import QuizManager from '../../components/quizzes/QuizManager'
+import { BACKEND_URL } from '../../utils/config'
 
 const DocumentDetailPage = () => {
 
@@ -42,9 +43,7 @@ const DocumentDetailPage = () => {
     if(filePath.startsWith('https://') || (filePath.startsWith('http://'))){
       return filePath
     }
-   // REACT_APP_API_URL is an environment variable present in .env file
-    const baseUrl=process.env.REACT_APP_API_URL || 'http://localhost:8000';
-    return `${baseUrl}${filePath.startsWith('/') ? '' : '/'}${filePath}`
+    return `${BACKEND_URL}${filePath.startsWith('/') ? '' : '/'}${filePath}`
   }
 
   const renderContent=()=>{

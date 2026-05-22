@@ -25,15 +25,26 @@ const app=express();
 connectDB();
 app.use(express.json());
 
+const defaultAllowedOrigins=[
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "https://conquer-ai-main.vercel.app",
+  "https://ailearningassistant-frontend.onrender.com"
+];
+
+const envAllowedOrigins=[
+  process.env.CLIENT_URL,
+  ...(process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(",") : [])
+]
+  .map((origin)=>origin?.trim())
+  .filter(Boolean);
+
+const allowedOrigins=[...new Set([...defaultAllowedOrigins, ...envAllowedOrigins])];
 
 //Middleware to handle CORS
 app.use(
     cors({
-     origin: [
-      "http://localhost:5173",
-      "http://localhost:5174",
-      "https://ailearningassistant-frontend.onrender.com"
-      ],
+     origin: allowedOrigins,
       methods:["GET","POST","PUT","DELETE"],
       allowedHeaders:["Content-Type","Authorization"],
       credentials:true,
