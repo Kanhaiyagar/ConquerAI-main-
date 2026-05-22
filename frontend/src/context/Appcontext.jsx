@@ -5,7 +5,8 @@ export const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
   const [enrolledCourses, setEnrolledCourses] = useState([]);
   const [userData, setUserData] = useState(null);
-  const [backendUrl] = useState(process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000');
+  
+  const [backendUrl] = useState(import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000');
 
   // Get authentication token
   const getToken = async () => {
